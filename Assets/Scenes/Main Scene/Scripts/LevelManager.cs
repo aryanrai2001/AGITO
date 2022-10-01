@@ -13,9 +13,9 @@ public class Level
 
 public class LevelManager : MonoBehaviour
 {
-    public Color levelSelectedColor;
-    public GameObject levelButtonPrefab;
     public Level[] levels;
+    public GameObject levelButtonPrefab;
+    public Color levelSelectedColor;
 
     [HideInInspector] public int selectedLevel = 0;
     private Button[] levelButtons;

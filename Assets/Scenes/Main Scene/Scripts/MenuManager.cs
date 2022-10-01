@@ -1,3 +1,4 @@
+using System.Collections;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -22,7 +23,8 @@ public class MenuManager : MonoBehaviour
     private TextMeshProUGUI levelInfoText;
     private Button playLevelButton;
     private Button backButtonInLevelSelection;
-    private LevelManager levelManager;
+
+    [HideInInspector] public LevelManager levelManager;
 
     public void Init()
     {
@@ -66,9 +68,21 @@ public class MenuManager : MonoBehaviour
     public void LoadLevel()
     {
         GameManager.instance.audioManager.Play("Click");
+        StartCoroutine(TransitionLevel(levelManager.selectedLevel + 1));
+    }
+
+    public IEnumerator TransitionLevel(int level)
+    {
+        GameManager.instance.levelTransition.SetTrigger("Out");
+
+        yield return new WaitForSeconds(0.5f);
+
         GameManager.instance.backgroundManager.UpdateBackground();
         levelSelectionPanel.SetActive(false);
-        SceneManager.LoadScene(levelManager.selectedLevel+1, LoadSceneMode.Additive);
+
+        SceneManager.LoadScene(level, LoadSceneMode.Additive);
+
+        GameManager.instance.levelTransition.SetTrigger("In");
     }
 
     public void BackFromLevelSelection()
