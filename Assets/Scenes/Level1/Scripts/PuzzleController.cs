@@ -22,7 +22,7 @@ public class PuzzleController : MonoBehaviour
             unevenSections[i] = value;
         }
 
-        snapSensitivity = 5;
+        snapSensitivity = 7;
         piecesPlaced = 0;
 
         for (int i = 0; i < pieceCount; i++)

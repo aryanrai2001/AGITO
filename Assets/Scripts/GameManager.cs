@@ -5,6 +5,7 @@ public class GameManager : MonoBehaviour
     [HideInInspector] public static GameManager instance;
     [HideInInspector] public static GameAssets assets;
 
+    [HideInInspector] public Camera mainCamera;
     [HideInInspector] public Canvas canvas;
     [HideInInspector] public Animator levelTransition;
 
@@ -26,6 +27,7 @@ public class GameManager : MonoBehaviour
             Debug.LogError("Multiple GameManager Instances Found!");
         }
 
+        mainCamera = Camera.main;
         canvas = FindObjectOfType<Canvas>();
         levelTransition = canvas.transform.GetChild(canvas.transform.childCount-1).GetComponent<Animator>();
 

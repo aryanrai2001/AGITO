@@ -8,6 +8,7 @@ using UnityEngine.UI;
 public class Level
 {
     public string levelName;
+    [TextArea]
     public string levelInfo;
 }
 

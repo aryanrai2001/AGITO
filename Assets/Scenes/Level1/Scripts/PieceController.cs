@@ -14,7 +14,7 @@ public class PieceController : MonoBehaviour
     public void Init()
     {
         puzzleController = GetComponentInParent<PuzzleController>();
-        panelRectTransform = puzzleController.GetComponent<RectTransform>();
+        panelRectTransform = puzzleController.transform.parent.GetComponent<RectTransform>();
         canPick = true;
 
         EventTrigger trigger = transform.AddComponent<EventTrigger>();
@@ -44,7 +44,7 @@ public class PieceController : MonoBehaviour
 
     public void Dropped()
     {
-        if (!canPick) 
+        if (!canPick || !isPicked) 
             return;
         isPicked = false;
         canPick = !puzzleController.Placed(GetComponent<RectTransform>().localPosition);
@@ -59,7 +59,7 @@ public class PieceController : MonoBehaviour
     {
         if (isPicked)
         {
-            if (!RectTransformUtility.RectangleContainsScreenPoint(panelRectTransform, Input.mousePosition))
+            if (!RectTransformUtility.RectangleContainsScreenPoint(panelRectTransform, Input.mousePosition, Level1Handler.instance.levelCamera))
             {
                 Dropped();
                 return;
