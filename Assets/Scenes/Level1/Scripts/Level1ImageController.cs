@@ -32,6 +32,6 @@ public class Level1ImageController : MonoBehaviour
         blurryImage.color = imageColor;
         clarityIndicator.value = alpha;
         if (alpha == 1.0f)
-            Level1Handler.instance.Finished();
+            LevelHandler.instance.FinishLevel();
     }
 }

@@ -13,7 +13,7 @@ public class LevelNHandler : LevelHandler
         Init();
     }
 
-    protected override void InitLevel()
+    public override void InitLevel()
     {
         LevelIndex = 0;
         continueButtonLevel2 = canvas.transform.GetChild(0).GetComponent<Button>();
@@ -21,7 +21,7 @@ public class LevelNHandler : LevelHandler
         continueButtonLevel2.onClick.AddListener(delegate { GameManager.instance.menuManager.TransitionOnButton(levelsUIManager.ContinueAfterGame); });
     }
 
-    protected override void FinishLevel()
+    public override void FinishLevel()
     {
         continueButtonLevel2.interactable = true;
     }

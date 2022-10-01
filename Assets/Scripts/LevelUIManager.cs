@@ -13,8 +13,8 @@ public abstract class LevelHandler : MonoBehaviour
     [HideInInspector] public Camera levelCamera;
     [HideInInspector] public Canvas canvas;
 
-    protected abstract void InitLevel();
-    protected abstract void FinishLevel();
+    public abstract void InitLevel();
+    public abstract void FinishLevel();
 
     public void Init()
     {
@@ -38,12 +38,6 @@ public abstract class LevelHandler : MonoBehaviour
         levelsUIManager.LoadLevelUI();
     }
 
-    public void Finished()
-    {
-        PlayerPrefs.SetInt("LevelReached", LevelIndex);
-        FinishLevel();
-    }
-
     public void Close()
     {
         GameManager.instance.mainCamera.GetUniversalAdditionalCameraData().cameraStack.Remove(levelCamera);
@@ -57,7 +51,7 @@ public abstract class LevelHandler : MonoBehaviour
         //CheatCodes
         if (Input.GetKey(KeyCode.N) && Input.GetKey(KeyCode.S) && Input.GetKey(KeyCode.A))
         {
-            Finished();
+            FinishLevel();
         }
     }
 }
@@ -67,19 +61,26 @@ public class LevelUIManager : MonoBehaviour
     private GameObject level;
     private GameObject introPanel;
     private GameObject infoPanel;
+    private GameObject triviaPanel;
     private Button continueIntroButton;
     private Button continueInfoButton;
+    private TriviaManager triviaManager;
+
+    private bool hasTrivia;
 
     public void Init()
     {
         level = transform.GetChild(LevelHandler.instance.LevelIndex - 1).gameObject;
         introPanel = level.transform.GetChild(0).gameObject;
         infoPanel = level.transform.GetChild(1).gameObject;
+        triviaPanel = level.transform.GetChild(2).gameObject;
+        triviaManager = triviaPanel.GetComponent<TriviaManager>();
         continueIntroButton = introPanel.transform.GetChild(1).GetChild(1).GetComponent<Button>();
         continueInfoButton = infoPanel.transform.GetChild(1).GetChild(1).GetComponent<Button>();
 
         continueIntroButton.onClick.AddListener(delegate { GameManager.instance.menuManager.TransitionOnButton(ContinueAfterIntro); });
         continueInfoButton.onClick.AddListener(delegate { GameManager.instance.menuManager.TransitionOnButton(ContinueAfterInfo); });
+        hasTrivia = triviaManager.Init();
     }
 
     public void LoadLevelUI()
@@ -103,12 +104,28 @@ public class LevelUIManager : MonoBehaviour
 
     public void UnloadLevelUI()
     {
+        triviaPanel.SetActive(false);
         infoPanel.SetActive(true);
     }
 
     public void ContinueAfterInfo()
     {
         infoPanel.SetActive(false);
+        if (hasTrivia)
+        {
+            triviaPanel.SetActive(true);
+            triviaManager.Refresh();
+        }
+        else
+        {
+            ContinueAfterTrivia();
+        }
+    }
+
+    public void ContinueAfterTrivia()
+    {
+        PlayerPrefs.SetInt("LevelReached", LevelHandler.instance.LevelIndex);
         LevelHandler.instance.Close();
+        triviaPanel.SetActive(false);
     }
 }

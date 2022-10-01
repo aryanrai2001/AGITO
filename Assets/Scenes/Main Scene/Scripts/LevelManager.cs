@@ -22,7 +22,6 @@ public class LevelManager : MonoBehaviour
     private ColorBlock originalColors;
     private ColorBlock selectedColors;
 
-    private GameObject levelsHolder;
     private TextMeshProUGUI levelInfoText;
 
     public void Init(GameObject levelsHolder, TextMeshProUGUI levelInfoText)
@@ -33,9 +32,8 @@ public class LevelManager : MonoBehaviour
             return;
         }
 
-        //Reset(); // !!!!!!!!!!!!!!!!!!!!!!!!!!! Remove This !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+        Reset(); // !!!!!!!!!!!!!!!!!!!!!!!!!!! Remove This !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-        this.levelsHolder = levelsHolder;
         this.levelInfoText = levelInfoText;
 
         levelButtons = new Button[GameManager.assets.levels.Length];

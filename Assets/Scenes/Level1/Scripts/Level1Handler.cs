@@ -16,7 +16,7 @@ public class Level1Handler : LevelHandler
         Init();
     }
 
-    protected override void InitLevel()
+    public override void InitLevel()
     {
         LevelIndex = 1;
         panel1 = canvas.transform.GetChild(0).GetComponent<Level1ImageController>();
@@ -31,7 +31,7 @@ public class Level1Handler : LevelHandler
         puzzleController.Init();
     }
 
-    protected override void FinishLevel()
+    public override void FinishLevel()
     {
         continueButtonLevel1.interactable = true;
     }

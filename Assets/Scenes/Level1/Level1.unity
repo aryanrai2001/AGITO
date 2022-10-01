@@ -2037,6 +2037,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc9288a84786e144db2ed011be31bd25, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  levelsUIManager: {fileID: 0}
   levelHolder: {fileID: 1822339671}
   levelCamera: {fileID: 0}
   canvas: {fileID: 1514200949}
