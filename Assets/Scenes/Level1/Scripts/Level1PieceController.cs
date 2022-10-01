@@ -3,9 +3,9 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class PieceController : MonoBehaviour
+public class Level1PieceController : MonoBehaviour
 {
-    private PuzzleController puzzleController;
+    private Level1PuzzleController puzzleController;
     private RectTransform panelRectTransform;
     private Vector3 delta;
     private bool canPick;
@@ -13,7 +13,7 @@ public class PieceController : MonoBehaviour
 
     public void Init()
     {
-        puzzleController = GetComponentInParent<PuzzleController>();
+        puzzleController = GetComponentInParent<Level1PuzzleController>();
         panelRectTransform = puzzleController.transform.parent.GetComponent<RectTransform>();
         canPick = true;
 

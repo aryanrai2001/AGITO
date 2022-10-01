@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public class ClarityHandler : MonoBehaviour
+public class Level1ImageController : MonoBehaviour
 {
     private GameObject hubbleImage;
     private Image blurryImage;

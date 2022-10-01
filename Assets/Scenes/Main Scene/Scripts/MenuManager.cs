@@ -1,5 +1,6 @@
 using System;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -73,6 +74,7 @@ public class MenuManager : MonoBehaviour
     {
         startingPanel.SetActive(false);
         levelSelectionPanel.SetActive(true);
+        levelManager.SelectLevel(-1);
     }
 
     public void LoadLevel()

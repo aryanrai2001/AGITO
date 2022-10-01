@@ -14,7 +14,6 @@ public class GameManager : MonoBehaviour
     [HideInInspector] public BackgroundManager backgroundManager;
     [HideInInspector] public AudioManager audioManager;
     [HideInInspector] public MenuManager menuManager;
-    [HideInInspector] public LevelsUIManager levelsUIManager;
 
     private float transitionDuration;
 
@@ -38,12 +37,10 @@ public class GameManager : MonoBehaviour
         backgroundManager = GetComponent<BackgroundManager>();
         audioManager = GetComponent<AudioManager>();
         menuManager = canvas.transform.GetChild(1).GetComponent<MenuManager>();
-        levelsUIManager = canvas.transform.GetChild(2).GetComponent<LevelsUIManager>();
 
         backgroundManager.Init();
         audioManager.Init();
         menuManager.Init();
-        levelsUIManager.Init();
 
         RuntimeAnimatorController ac = levelTransition.runtimeAnimatorController;
         transitionDuration = ac.animationClips[0].length;

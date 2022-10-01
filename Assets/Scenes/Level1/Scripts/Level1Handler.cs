@@ -1,63 +1,38 @@
 using UnityEngine;
-using UnityEngine.Rendering.Universal;
-using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class Level1Handler : MonoBehaviour
+public class Level1Handler : LevelHandler
 {
-    [HideInInspector] public static Level1Handler instance;
-
-    public GameObject levelHolder;
-
-    [HideInInspector] public Camera levelCamera;
-    [HideInInspector] public Canvas canvas;
-
-    [HideInInspector] public ClarityHandler panel1;
-    [HideInInspector] public ClarityHandler panel2;
-    [HideInInspector] public PuzzleController puzzleController;
+    [HideInInspector] public Level1ImageController panel1;
+    [HideInInspector] public Level1ImageController panel2;
+    [HideInInspector] public Level1PuzzleController puzzleController;
     [HideInInspector] public Button continueButtonLevel1;
+
+    public override int LevelIndex { get; set; }
 
     private void Awake()
     {
-        if (instance == null)
-        {
-            instance = this;
-            DontDestroyOnLoad(gameObject);
-        }
-        else
-        {
-            Debug.LogError("Multiple Level1Handler Instances Found!");
-        }
+        instance = this;
+        Init();
+    }
 
-        levelCamera = levelHolder.transform.GetChild(0).GetComponent<Camera>();
-        canvas = levelHolder.transform.GetChild(1).GetComponent<Canvas>();
-
-        panel1 = canvas.transform.GetChild(0).GetComponent<ClarityHandler>();
-        panel2 = canvas.transform.GetChild(1).GetComponent<ClarityHandler>();
-        puzzleController = canvas.transform.GetChild(2).GetChild(0).GetChild(0).GetComponent<PuzzleController>();
+    protected override void InitLevel()
+    {
+        LevelIndex = 1;
+        panel1 = canvas.transform.GetChild(0).GetComponent<Level1ImageController>();
+        panel2 = canvas.transform.GetChild(1).GetComponent<Level1ImageController>();
+        puzzleController = canvas.transform.GetChild(2).GetChild(0).GetChild(0).GetComponent<Level1PuzzleController>();
         continueButtonLevel1 = canvas.transform.GetChild(3).GetComponent<Button>();
 
-        continueButtonLevel1.onClick.AddListener(delegate { GameManager.instance.menuManager.TransitionOnButton(GameManager.instance.levelsUIManager.ContinueAfterGameLevel1); });
+        continueButtonLevel1.onClick.AddListener(delegate { GameManager.instance.menuManager.TransitionOnButton(levelsUIManager.ContinueAfterGame); });
 
-        GameManager.instance.mainCamera.GetUniversalAdditionalCameraData().cameraStack.Add(levelCamera);
-
-        levelCamera.gameObject.SetActive(false);
-        canvas.gameObject.SetActive(true);
         panel1.Init();
         panel2.Init();
         puzzleController.Init();
-        canvas.gameObject.SetActive(false);
-        GameManager.instance.levelsUIManager.LoadLevel1();
     }
 
-    public void Finished()
+    protected override void FinishLevel()
     {
-        PlayerPrefs.SetInt("LevelReached", SceneManager.GetActiveScene().buildIndex);
         continueButtonLevel1.interactable = true;
-    }
-
-    public void EndLevel()
-    {
-        GameManager.instance.mainCamera.GetUniversalAdditionalCameraData().cameraStack.Remove(levelCamera);
     }
 }

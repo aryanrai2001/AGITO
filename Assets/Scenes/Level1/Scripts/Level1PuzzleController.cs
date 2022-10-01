@@ -1,8 +1,8 @@
 using UnityEngine;
 
-public class PuzzleController : MonoBehaviour
+public class Level1PuzzleController : MonoBehaviour
 {
-    private PieceController[] pieces;
+    private Level1PieceController[] pieces;
     private int[] unevenSections;
     private float snapSensitivity;
     private int piecesPlaced;
@@ -10,7 +10,7 @@ public class PuzzleController : MonoBehaviour
     public void Init()
     {
         int pieceCount = transform.childCount;
-        pieces = new PieceController[pieceCount];
+        pieces = new Level1PieceController[pieceCount];
 
         int total = 90, value;
         unevenSections = new int[pieceCount];
@@ -27,7 +27,7 @@ public class PuzzleController : MonoBehaviour
 
         for (int i = 0; i < pieceCount; i++)
         {
-            pieces[i] = transform.GetChild(i).GetComponent<PieceController>();
+            pieces[i] = transform.GetChild(i).GetComponent<Level1PieceController>();
             pieces[i].Init();
         }
     }
@@ -36,8 +36,8 @@ public class PuzzleController : MonoBehaviour
     {
         if (piecePosition.sqrMagnitude < snapSensitivity * snapSensitivity * snapSensitivity)
         {
-            Level1Handler.instance.panel1.UpdateAlpha(unevenSections[piecesPlaced]);
-            Level1Handler.instance.panel2.UpdateAlpha(unevenSections[8-piecesPlaced]);
+            ((Level1Handler)LevelHandler.instance).panel1.UpdateAlpha(unevenSections[piecesPlaced]);
+            ((Level1Handler)LevelHandler.instance).panel2.UpdateAlpha(unevenSections[8-piecesPlaced]);
             piecesPlaced++;
             return true;
         }
