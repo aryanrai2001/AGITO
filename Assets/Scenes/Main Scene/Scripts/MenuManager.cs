@@ -1,4 +1,6 @@
+using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class MenuManager : MonoBehaviour
@@ -14,6 +16,13 @@ public class MenuManager : MonoBehaviour
     private Button creditsButton;
     private GameObject creditsPanel;
     private Button backButtonInOptions;
+
+    private GameObject levelSelectionPanel;
+    private GameObject levelsHolder;
+    private TextMeshProUGUI levelInfoText;
+    private Button playLevelButton;
+    private Button backButtonInLevelSelection;
+    private LevelManager levelManager;
 
     public void Init()
     {
@@ -34,23 +43,54 @@ public class MenuManager : MonoBehaviour
         aboutButton.onClick.AddListener(About);
         creditsButton.onClick.AddListener(Credits);
         backButtonInOptions.onClick.AddListener(BackFromOptions);
+
+        levelSelectionPanel = transform.GetChild(2).gameObject;
+        levelsHolder = levelSelectionPanel.transform.GetChild(1).GetChild(0).GetChild(0).GetChild(0).gameObject;
+        levelInfoText = levelSelectionPanel.transform.GetChild(2).GetChild(0).GetComponent<TextMeshProUGUI>();
+        playLevelButton = levelSelectionPanel.transform.GetChild(2).GetChild(1).GetComponent<Button>();
+        backButtonInLevelSelection = levelSelectionPanel.transform.GetChild(3).GetComponent<Button>();
+        playLevelButton.onClick.AddListener(LoadLevel);
+        backButtonInLevelSelection.onClick.AddListener(BackFromLevelSelection);
+        levelManager = levelSelectionPanel.GetComponent<LevelManager>();
+        levelManager.Init(levelsHolder, levelInfoText);
     }
 
     public void Play()
     {
+        GameManager.instance.audioManager.Play("Click");
+        GameManager.instance.backgroundManager.UpdateBackground();
+        startingPanel.SetActive(false);
+        levelSelectionPanel.SetActive(true);
+    }
 
+    public void LoadLevel()
+    {
+        GameManager.instance.audioManager.Play("Click");
+        GameManager.instance.backgroundManager.UpdateBackground();
+        levelSelectionPanel.SetActive(false);
+        SceneManager.LoadScene(levelManager.selectedLevel+1, LoadSceneMode.Additive);
+    }
+
+    public void BackFromLevelSelection()
+    {
+        GameManager.instance.audioManager.Play("Click");
+        GameManager.instance.backgroundManager.UpdateBackground();
+        levelSelectionPanel.SetActive(false);
+        startingPanel.SetActive(true);
+        levelManager.SelectLevel(-1);
     }
 
     public void Options()
     {
+        About();
         GameManager.instance.backgroundManager.UpdateBackground();
         startingPanel.SetActive(false);
         optionsPanel.SetActive(true);
-        About();
     }
 
     public void About()
     {
+        GameManager.instance.audioManager.Play("Click");
         aboutButton.interactable = false;
         creditsButton.interactable = true;
         creditsPanel.SetActive(false);
@@ -59,6 +99,7 @@ public class MenuManager : MonoBehaviour
 
     public void Credits()
     {
+        GameManager.instance.audioManager.Play("Click");
         creditsButton.interactable = false;
         aboutButton.interactable = true;
         aboutPanel.SetActive(false);
@@ -67,6 +108,7 @@ public class MenuManager : MonoBehaviour
 
     public void BackFromOptions()
     {
+        GameManager.instance.audioManager.Play("Click");
         GameManager.instance.backgroundManager.UpdateBackground();
         optionsPanel.SetActive(false);
         startingPanel.SetActive(true);
@@ -74,6 +116,7 @@ public class MenuManager : MonoBehaviour
 
     public void Quit()
     {
+        GameManager.instance.audioManager.Play("Click");
         Application.Quit();
     }
 }

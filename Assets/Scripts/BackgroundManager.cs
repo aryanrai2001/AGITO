@@ -3,10 +3,8 @@ using UnityEngine.UI;
 
 public class BackgroundManager : MonoBehaviour
 {
-    public Sprite[] backgroundImages;
-
-    [HideInInspector] public GameObject backgroundObject;
-    [HideInInspector] public Image background;
+    private GameObject backgroundObject;
+    private Image background;
 
     public void Init()
     {
@@ -17,6 +15,6 @@ public class BackgroundManager : MonoBehaviour
 
     public void UpdateBackground()
     {
-        background.overrideSprite = backgroundImages[Random.Range(0, backgroundImages.Length)];
+        background.overrideSprite = GameManager.assets.backgroundImages[Random.Range(0, GameManager.assets.backgroundImages.Length)];
     }
 }
