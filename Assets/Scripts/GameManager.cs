@@ -1,3 +1,5 @@
+using System;
+using System.Collections;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
@@ -13,6 +15,8 @@ public class GameManager : MonoBehaviour
     [HideInInspector] public AudioManager audioManager;
     [HideInInspector] public MenuManager menuManager;
     [HideInInspector] public LevelsUIManager levelsUIManager;
+
+    private float transitionDuration;
 
     private void Awake()
     {
@@ -40,5 +44,21 @@ public class GameManager : MonoBehaviour
         audioManager.Init();
         menuManager.Init();
         levelsUIManager.Init();
+
+        RuntimeAnimatorController ac = levelTransition.runtimeAnimatorController;
+        transitionDuration = ac.animationClips[0].length;
+    }
+
+    public IEnumerator TransitionCoroutine(Action action)
+    {
+        levelTransition.SetTrigger("Out");
+
+        yield return new WaitForSeconds(transitionDuration);
+
+        backgroundManager.UpdateBackground();
+
+        action.Invoke();
+
+        levelTransition.SetTrigger("In");
     }
 }

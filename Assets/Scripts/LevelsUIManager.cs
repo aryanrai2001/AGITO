@@ -17,8 +17,8 @@ public class LevelsUIManager : MonoBehaviour
         continueIntroButtonLevel1 = introPanelLevel1.transform.GetChild(1).GetChild(1).GetComponent<Button>();
         continueInfoButtonLevel1 = infoPanelLevel1.transform.GetChild(1).GetChild(1).GetComponent<Button>();
 
-        continueIntroButtonLevel1.onClick.AddListener(ContinueAfterIntroLevel1);
-        continueInfoButtonLevel1.onClick.AddListener(ContinueAfterInfoLevel1);
+        continueIntroButtonLevel1.onClick.AddListener(delegate { GameManager.instance.menuManager.TransitionOnButton(ContinueAfterIntroLevel1); });
+        continueInfoButtonLevel1.onClick.AddListener(delegate { GameManager.instance.menuManager.TransitionOnButton(ContinueAfterInfoLevel1); });
     }
 
     public void LoadLevel1()
@@ -26,15 +26,8 @@ public class LevelsUIManager : MonoBehaviour
         introPanelLevel1.SetActive(true);
     }
 
-    public void FinishLevel1()
-    {
-        infoPanelLevel1.SetActive(true);
-    }
-
     public void ContinueAfterIntroLevel1()
     {
-        GameManager.instance.audioManager.Play("Click");
-        GameManager.instance.backgroundManager.UpdateBackground();
         introPanelLevel1.SetActive(false);
         Level1Handler.instance.canvas.gameObject.SetActive(true);
         Level1Handler.instance.levelCamera.gameObject.SetActive(true);
@@ -42,16 +35,18 @@ public class LevelsUIManager : MonoBehaviour
 
     public void ContinueAfterGameLevel1()
     {
-        GameManager.instance.audioManager.Play("Click");
-        GameManager.instance.backgroundManager.UpdateBackground();
-        Level1Handler.instance.canvas.gameObject.SetActive(false);
         GameManager.instance.levelsUIManager.FinishLevel1();
+        Level1Handler.instance.canvas.gameObject.SetActive(false);
+        Level1Handler.instance.levelCamera.gameObject.SetActive(false);
+    }
+
+    public void FinishLevel1()
+    {
+        infoPanelLevel1.SetActive(true);
     }
 
     public void ContinueAfterInfoLevel1()
     {
-        GameManager.instance.audioManager.Play("Click");
-        GameManager.instance.backgroundManager.UpdateBackground();
         infoPanelLevel1.SetActive(false);
         Level1Handler.instance.EndLevel();
     }

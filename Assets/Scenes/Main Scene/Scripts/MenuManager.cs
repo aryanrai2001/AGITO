@@ -1,4 +1,4 @@
-using System.Collections;
+using System;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -32,9 +32,9 @@ public class MenuManager : MonoBehaviour
         playButton = startingPanel.transform.GetChild(1).GetChild(0).GetComponent<Button>();
         optionButton = startingPanel.transform.GetChild(1).GetChild(1).GetComponent<Button>();
         quitButton = startingPanel.transform.GetChild(1).GetChild(2).GetComponent<Button>();
-        playButton.onClick.AddListener(Play);
-        optionButton.onClick.AddListener(Options);
-        quitButton.onClick.AddListener(Quit);
+        playButton.onClick.AddListener(delegate { TransitionOnButton(Play); });
+        optionButton.onClick.AddListener(delegate { TransitionOnButton(Options); });
+        quitButton.onClick.AddListener(delegate { TransitionOnButton(Quit); }) ;
 
         optionsPanel = transform.GetChild(1).gameObject;
         aboutButton = optionsPanel.transform.GetChild(1).GetComponent<Button>();
@@ -44,51 +44,45 @@ public class MenuManager : MonoBehaviour
         backButtonInOptions = optionsPanel.transform.GetChild(5).GetComponent<Button>();
         aboutButton.onClick.AddListener(About);
         creditsButton.onClick.AddListener(Credits);
-        backButtonInOptions.onClick.AddListener(BackFromOptions);
+        backButtonInOptions.onClick.AddListener(delegate { TransitionOnButton(BackFromOptions); });
 
         levelSelectionPanel = transform.GetChild(2).gameObject;
         levelsHolder = levelSelectionPanel.transform.GetChild(1).GetChild(0).GetChild(0).GetChild(0).gameObject;
         levelInfoText = levelSelectionPanel.transform.GetChild(2).GetChild(0).GetComponent<TextMeshProUGUI>();
         playLevelButton = levelSelectionPanel.transform.GetChild(2).GetChild(1).GetComponent<Button>();
         backButtonInLevelSelection = levelSelectionPanel.transform.GetChild(3).GetComponent<Button>();
-        playLevelButton.onClick.AddListener(LoadLevel);
-        backButtonInLevelSelection.onClick.AddListener(BackFromLevelSelection);
+        playLevelButton.onClick.AddListener(delegate { TransitionOnButton(LoadLevel); });
+        backButtonInLevelSelection.onClick.AddListener(delegate { TransitionOnButton(BackFromLevelSelection); });
+
         levelManager = levelSelectionPanel.GetComponent<LevelManager>();
         levelManager.Init(levelsHolder, levelInfoText);
     }
 
-    public void Play()
+    public void Transition(Action action)
+    {
+        StartCoroutine(GameManager.instance.TransitionCoroutine(action));
+    }
+
+    public void TransitionOnButton(Action action)
     {
         GameManager.instance.audioManager.Play("Click");
-        GameManager.instance.backgroundManager.UpdateBackground();
+        StartCoroutine(GameManager.instance.TransitionCoroutine(action));
+    }
+
+    public void Play()
+    {
         startingPanel.SetActive(false);
         levelSelectionPanel.SetActive(true);
     }
 
     public void LoadLevel()
     {
-        GameManager.instance.audioManager.Play("Click");
-        StartCoroutine(TransitionLevel(levelManager.selectedLevel + 1));
-    }
-
-    public IEnumerator TransitionLevel(int level)
-    {
-        GameManager.instance.levelTransition.SetTrigger("Out");
-
-        yield return new WaitForSeconds(0.5f);
-
-        GameManager.instance.backgroundManager.UpdateBackground();
         levelSelectionPanel.SetActive(false);
-
-        SceneManager.LoadScene(level, LoadSceneMode.Additive);
-
-        GameManager.instance.levelTransition.SetTrigger("In");
+        SceneManager.LoadScene(levelManager.selectedLevel + 1, LoadSceneMode.Additive);
     }
 
     public void BackFromLevelSelection()
     {
-        GameManager.instance.audioManager.Play("Click");
-        GameManager.instance.backgroundManager.UpdateBackground();
         levelSelectionPanel.SetActive(false);
         startingPanel.SetActive(true);
         levelManager.SelectLevel(-1);
@@ -96,8 +90,10 @@ public class MenuManager : MonoBehaviour
 
     public void Options()
     {
-        About();
-        GameManager.instance.backgroundManager.UpdateBackground();
+        aboutButton.interactable = false;
+        creditsButton.interactable = true;
+        creditsPanel.SetActive(false);
+        aboutPanel.SetActive(true);
         startingPanel.SetActive(false);
         optionsPanel.SetActive(true);
     }
@@ -122,15 +118,12 @@ public class MenuManager : MonoBehaviour
 
     public void BackFromOptions()
     {
-        GameManager.instance.audioManager.Play("Click");
-        GameManager.instance.backgroundManager.UpdateBackground();
         optionsPanel.SetActive(false);
         startingPanel.SetActive(true);
     }
 
     public void Quit()
     {
-        GameManager.instance.audioManager.Play("Click");
         Application.Quit();
     }
 }

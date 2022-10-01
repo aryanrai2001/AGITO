@@ -37,7 +37,7 @@ public class Level1Handler : MonoBehaviour
         puzzleController = canvas.transform.GetChild(2).GetChild(0).GetChild(0).GetComponent<PuzzleController>();
         continueButtonLevel1 = canvas.transform.GetChild(3).GetComponent<Button>();
 
-        continueButtonLevel1.onClick.AddListener(GameManager.instance.levelsUIManager.ContinueAfterGameLevel1);
+        continueButtonLevel1.onClick.AddListener(delegate { GameManager.instance.menuManager.TransitionOnButton(GameManager.instance.levelsUIManager.ContinueAfterGameLevel1); });
 
         GameManager.instance.mainCamera.GetUniversalAdditionalCameraData().cameraStack.Add(levelCamera);
 
