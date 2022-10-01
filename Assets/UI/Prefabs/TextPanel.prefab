@@ -231,7 +231,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1439832912812749453}
   m_Direction: 2
   m_Value: 0
-  m_Size: 1
+  m_Size: 0.008264462
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -489,7 +489,7 @@ GameObject:
   - component: {fileID: 7946621916166509370}
   - component: {fileID: 7946621916166509349}
   m_Layer: 5
-  m_Name: Text Panel
+  m_Name: TextPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -718,7 +718,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3050475946138249103, guid: d81455e97d5137d4b9d1863743c98dab, type: 3}
       propertyPath: m_Pivot.y
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3050475946138249103, guid: d81455e97d5137d4b9d1863743c98dab, type: 3}
       propertyPath: m_RootOrder

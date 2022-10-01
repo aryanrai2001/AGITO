@@ -1,6 +1,4 @@
-using System.Collections;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -13,7 +11,7 @@ public class GameManager : MonoBehaviour
     [HideInInspector] public BackgroundManager backgroundManager;
     [HideInInspector] public AudioManager audioManager;
     [HideInInspector] public MenuManager menuManager;
-    [HideInInspector] public Level1Manager level1Manager;
+    [HideInInspector] public LevelsUIManager levelsUIManager;
 
     private void Awake()
     {
@@ -34,11 +32,11 @@ public class GameManager : MonoBehaviour
         backgroundManager = GetComponent<BackgroundManager>();
         audioManager = GetComponent<AudioManager>();
         menuManager = canvas.transform.GetChild(1).GetComponent<MenuManager>();
-        level1Manager = canvas.transform.GetChild(2).GetComponent<Level1Manager>();
+        levelsUIManager = canvas.transform.GetChild(2).GetComponent<LevelsUIManager>();
 
         backgroundManager.Init();
         audioManager.Init();
         menuManager.Init();
-        level1Manager.Init();
+        levelsUIManager.Init();
     }
 }

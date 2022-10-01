@@ -10,6 +10,7 @@ public class BackgroundManager : MonoBehaviour
     {
         backgroundObject = GameManager.instance.canvas.transform.GetChild(0).gameObject;
         background = backgroundObject.GetComponent<Image>();
+        background.color = Color.white;
         UpdateBackground();
     }
 

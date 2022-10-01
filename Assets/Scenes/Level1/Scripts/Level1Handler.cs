@@ -4,6 +4,6 @@ public class Level1Handler : MonoBehaviour
 {
     private void Awake()
     {
-        GameManager.instance.level1Manager.Load();
+        GameManager.instance.levelsUIManager.LoadLevel1();
     }
 }
