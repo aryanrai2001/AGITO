@@ -4,8 +4,10 @@ public class GameManager : MonoBehaviour
 {
     [HideInInspector] public static GameManager instance;
 
-    [HideInInspector] public PageManager pageManager;
+    [HideInInspector] public Canvas canvas;
+
     [HideInInspector] public BackgroundManager backgroundManager;
+    [HideInInspector] public MenuManager menuManager;
 
     private void Awake()
     {
@@ -13,10 +15,12 @@ public class GameManager : MonoBehaviour
             instance = this;
         DontDestroyOnLoad(gameObject);
 
-        pageManager = GetComponent<PageManager>();
-        backgroundManager = GetComponent<BackgroundManager>();
+        canvas = FindObjectOfType<Canvas>();
 
-        pageManager.Init();
+        backgroundManager = GetComponent<BackgroundManager>();
+        menuManager = canvas.transform.GetChild(1).GetComponent<MenuManager>();
+
         backgroundManager.Init();
+        menuManager.Init();
     }
 }

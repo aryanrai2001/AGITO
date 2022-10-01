@@ -5,10 +5,13 @@ public class BackgroundManager : MonoBehaviour
 {
     public Sprite[] backgroundImages;
 
+    [HideInInspector] public GameObject backgroundObject;
     [HideInInspector] public Image background;
 
     public void Init()
     {
+        backgroundObject = GameManager.instance.canvas.transform.GetChild(0).gameObject;
+        background = backgroundObject.GetComponent<Image>();
         UpdateBackground();
     }
 
