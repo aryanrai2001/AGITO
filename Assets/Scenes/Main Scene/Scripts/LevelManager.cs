@@ -33,7 +33,7 @@ public class LevelManager : MonoBehaviour
             return;
         }
 
-        Reset(); // !!!!!!!!!!!!!!!!!!!!!!!!!!! Remove This !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+        //Reset(); // !!!!!!!!!!!!!!!!!!!!!!!!!!! Remove This !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
         this.levelsHolder = levelsHolder;
         this.levelInfoText = levelInfoText;
@@ -69,7 +69,7 @@ public class LevelManager : MonoBehaviour
         if (levelReached >= levelButtons.Length)
             return;
         levelButtons[levelReached].interactable = true;
-        levelButtons[levelReached].transform.GetChild(0).GetComponent<TextMeshProUGUI>().fontStyle ^= FontStyles.Strikethrough;
+        levelButtons[levelReached].transform.GetChild(0).GetComponent<TextMeshProUGUI>().fontStyle &= ~FontStyles.Strikethrough;
     }
 
     public void SelectLevel(int level)

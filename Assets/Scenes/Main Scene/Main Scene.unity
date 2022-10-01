@@ -974,8 +974,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1418556657}
   m_HandleRect: {fileID: 1418556656}
   m_Direction: 2
-  m_Value: 0
-  m_Size: 1
+  m_Value: 1
+  m_Size: 0.6666667
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -1032,8 +1032,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 258036705}
-  - component: {fileID: 258036709}
   - component: {fileID: 258036704}
+  - component: {fileID: 258036709}
   - component: {fileID: 258036708}
   - component: {fileID: 258036706}
   - component: {fileID: 258036707}
@@ -1062,7 +1062,6 @@ MonoBehaviour:
   backgroundManager: {fileID: 0}
   audioManager: {fileID: 0}
   menuManager: {fileID: 0}
-  levelsUIManager: {fileID: 0}
 --- !u!4 &258036705
 Transform:
   m_ObjectHideFlags: 0
@@ -1136,9 +1135,10 @@ MonoBehaviour:
       is it really twinkling? What looks like a twinkling star to our eyes is actually
       steady starlight that has been distorted, or bent, by the Earth''''s atmosphere.'
   - levelName: A Leap Backwards
-    levelInfo: 'Bla Bla Bla
-
-      But most importantly, Bla Blaaala Blbaa!!!'
+    levelInfo: "<b><u>April 07,2022</u> - \"Webb\u2019s anticipated science, beginning
+      with the study of the first stars and galaxies in the early universe.\"</b>
+      \r\nWe often see Webb gets called the replacement for Hubble, but we prefer
+      to call it a successor. After all, Webb is the scientific successor to Hubble;"
 --- !u!82 &258036709
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1488,7 +1488,22 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Level 2 Info
+  m_text: "The infrared range (sometimes called the \u201Cmolecular fingerprint region\u201D)
+    is ideal for identifying the presence of a range of chemicals, in particular
+    water and various organics. All four of Webb\u2019s science instruments can detect
+    various important molecules using their spectroscopic modes. They are particularly
+    sensitive to molecular ices present in cold molecular clouds before stars are
+    formed, and NIRCam and NIRSpec will, for the first time, comprehensively map
+    the spatial distribution of ices to help us understand their chemistry.\r\n\nMIRI
+    will also observe warm molecular gas near many young stars where rocky, potentially
+    habitable planets may be forming. These observations will be sensitive to most
+    bulk molecules and will allow us to develop a chemical census at the earliest
+    stages of planet formation. It is no surprise that a significant number of Webb\u2019s
+    early scientific investigations aim to measure how planetary systems build the
+    molecules that may be important for the emergence of life as we know it.\r\n\r\n<b>\u201CWe
+    will be keeping a close eye on MIRI as it cools down. As the only mid-infrared
+    instrument on Webb, MIRI will be particularly important for understanding the
+    origins of stars and planets.\u201D\r</b>"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: bf9afb85b006de840adde64df519e800, type: 2}
   m_sharedMaterial: {fileID: -7718841121852073926, guid: bf9afb85b006de840adde64df519e800, type: 2}
@@ -2302,7 +2317,7 @@ RectTransform:
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0.5, y: 1}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &525147152
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2323,7 +2338,21 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Level 2 Intro
+  m_text: "Webb's science goals were motivated by results from Hubble. Hubble's science
+    pushed us to look to longer wavelengths to \"go beyond\" what Hubble has already
+    done. In particular, more distant objects are more highly redshifted, and their
+    light is pushed from the UV and visible into the near-infrared. Thus observations
+    of these distant objects (like the first galaxies formed in the Universe, for
+    example) requires an infrared telescope.\r\n\r\n<b><u>Let us look at each reason
+    in more detail</u> :</b> We often hear that infrared light passes through obscuring
+    dust, revealing newborn stars and planets that are still embedded in their parental
+    clouds. In fact, mid-infrared light, as seen by MIRI, can pass through 20 times
+    thicker clouds than visible light. Because young stars are formed quickly (by
+    cosmic standards, anyway) \u2013 in as little as a few 100,000 years \u2013 their
+    natal clouds have not had time to disperse, hiding what is going on in this critical
+    stage from visible view. Webb\u2019s infrared sensitivity allows us to understand
+    what happens at these very first stages, as gas and dust are actively collapsing
+    to form new stars.\r"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: bf9afb85b006de840adde64df519e800, type: 2}
   m_sharedMaterial: {fileID: -7718841121852073926, guid: bf9afb85b006de840adde64df519e800, type: 2}
@@ -2435,7 +2464,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 600}
+  m_SizeDelta: {x: 0, y: 900}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!1 &580137343
 GameObject:
@@ -5711,6 +5740,10 @@ PrefabInstance:
       value: 0.9245283
       objectReference: {fileID: 0}
     - target: {fileID: 9057656806045973117, guid: 2397f817865961841b23771bc4d79926, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 9057656806045973117, guid: 2397f817865961841b23771bc4d79926, type: 3}
       propertyPath: m_PixelsPerUnitMultiplier
       value: 2
       objectReference: {fileID: 0}
@@ -6077,7 +6110,7 @@ RectTransform:
   m_Father: {fileID: 1575539791}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 0.3333333}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
