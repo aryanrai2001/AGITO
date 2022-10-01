@@ -3,8 +3,14 @@ using UnityEngine.UI;
 
 public class BackgroundManager : MonoBehaviour
 {
-    public Image background;
     public Sprite[] backgroundImages;
+
+    [HideInInspector] public Image background;
+
+    public void Init()
+    {
+        UpdateBackground();
+    }
 
     public void UpdateBackground()
     {
