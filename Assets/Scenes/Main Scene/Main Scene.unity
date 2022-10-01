@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.12731749, g: 0.13414757, b: 0.1210787, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -438,11 +438,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3050475946138249103, guid: d81455e97d5137d4b9d1863743c98dab, type: 3}
       propertyPath: m_SizeDelta.x
-      value: -350
+      value: -200
       objectReference: {fileID: 0}
     - target: {fileID: 3050475946138249103, guid: d81455e97d5137d4b9d1863743c98dab, type: 3}
       propertyPath: m_SizeDelta.y
-      value: -350
+      value: -220
       objectReference: {fileID: 0}
     - target: {fileID: 3050475946138249103, guid: d81455e97d5137d4b9d1863743c98dab, type: 3}
       propertyPath: m_LocalPosition.x
@@ -474,11 +474,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3050475946138249103, guid: d81455e97d5137d4b9d1863743c98dab, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -75
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3050475946138249103, guid: d81455e97d5137d4b9d1863743c98dab, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 75
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 3050475946138249103, guid: d81455e97d5137d4b9d1863743c98dab, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -494,8 +494,51 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5110314454497030502, guid: d81455e97d5137d4b9d1863743c98dab, type: 3}
       propertyPath: m_text
-      value: This is the Credits section of this game.
+      value: '<b><u>Member Credits -</u></b>
+
+        <b>Game Structure & Development:</b>
+        Aryan Rai
+
+        <b>Game Art & Editing:</b> Aryan Rai
+
+        <b>Game
+        Design & Storyline:</b> Pritish Sinha
+
+        <b>Playtester:</b> Vedansh
+        Tripathi
+
+
+        <b><u>Resource Credits -</u></b>
+
+        We extensively
+        used the NASA Webb Image library and CSA James Webb Space Telescope website,
+        which provided many astonishing observations of JWST. These allowed us to
+        develop accurate light curves based on physical observations, making our
+        project relevant to accurate real-world science;
+
+        We also used James
+        Webb blogs by NASA, taken from the editor''s notes which helped us develop
+        the storyline for the game and keep it more accurate in terms of the history
+        of JWST.
+
+'
       objectReference: {fileID: 0}
+    - target: {fileID: 5110314454497030502, guid: d81455e97d5137d4b9d1863743c98dab, type: 3}
+      propertyPath: m_fontSize
+      value: 36
+      objectReference: {fileID: 0}
+    - target: {fileID: 5110314454497030502, guid: d81455e97d5137d4b9d1863743c98dab, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 469ec47bdb825384e8fb0e0b67079a75, type: 2}
+    - target: {fileID: 5110314454497030502, guid: d81455e97d5137d4b9d1863743c98dab, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 36
+      objectReference: {fileID: 0}
+    - target: {fileID: 5110314454497030502, guid: d81455e97d5137d4b9d1863743c98dab, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 7700347118365185155, guid: 469ec47bdb825384e8fb0e0b67079a75, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d81455e97d5137d4b9d1863743c98dab, type: 3}
 --- !u!1 &71978359
@@ -5363,7 +5406,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3050475946138249103, guid: d81455e97d5137d4b9d1863743c98dab, type: 3}
       propertyPath: m_SizeDelta.x
-      value: -350
+      value: -214.99998
       objectReference: {fileID: 0}
     - target: {fileID: 3050475946138249103, guid: d81455e97d5137d4b9d1863743c98dab, type: 3}
       propertyPath: m_SizeDelta.y
@@ -5399,7 +5442,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3050475946138249103, guid: d81455e97d5137d4b9d1863743c98dab, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -75
+      value: -7.5
       objectReference: {fileID: 0}
     - target: {fileID: 3050475946138249103, guid: d81455e97d5137d4b9d1863743c98dab, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -5419,8 +5462,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5110314454497030502, guid: d81455e97d5137d4b9d1863743c98dab, type: 3}
       propertyPath: m_text
-      value: This is the About section of this game.
+      value: <b>Enlightenauts</b> bring you a game that gives you an awe-inspiring
+        and imformative experience that takes you through <b><u>James Webb Space
+        Telescope's</u></b> capabilities and development journey in a narratively
+        fulfilling sequece. It is directly inspired from <b>NASA</b> blogs and resources
+        provided by other space agencies including <b>ESA</b> and <b>CSA</b>. It's
+        really exciting to learn about how mankind's astonishing creation turns to
+        reality, how space is a real challenge and when science becomes an obstacle
+        in this journey.
       objectReference: {fileID: 0}
+    - target: {fileID: 5110314454497030502, guid: d81455e97d5137d4b9d1863743c98dab, type: 3}
+      propertyPath: m_fontSize
+      value: 41
+      objectReference: {fileID: 0}
+    - target: {fileID: 5110314454497030502, guid: d81455e97d5137d4b9d1863743c98dab, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: bf9afb85b006de840adde64df519e800, type: 2}
+    - target: {fileID: 5110314454497030502, guid: d81455e97d5137d4b9d1863743c98dab, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 41
+      objectReference: {fileID: 0}
+    - target: {fileID: 5110314454497030502, guid: d81455e97d5137d4b9d1863743c98dab, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -7718841121852073926, guid: bf9afb85b006de840adde64df519e800, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d81455e97d5137d4b9d1863743c98dab, type: 3}
 --- !u!1 &1306997569
@@ -5753,7 +5819,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9057656806045973119, guid: 2397f817865961841b23771bc4d79926, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2397f817865961841b23771bc4d79926, type: 3}
@@ -8156,7 +8222,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9057656806045973119, guid: 2397f817865961841b23771bc4d79926, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2397f817865961841b23771bc4d79926, type: 3}
