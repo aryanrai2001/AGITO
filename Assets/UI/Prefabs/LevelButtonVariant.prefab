@@ -25,11 +25,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 861191503566786746, guid: 5499c25600a07354fbedd3a230b09075, type: 3}
       propertyPath: m_Colors.m_PressedColor.b
-      value: 0.12444096
+      value: 0.5019608
       objectReference: {fileID: 0}
     - target: {fileID: 861191503566786746, guid: 5499c25600a07354fbedd3a230b09075, type: 3}
       propertyPath: m_Colors.m_PressedColor.g
-      value: 0.3679245
+      value: 0.2509804
       objectReference: {fileID: 0}
     - target: {fileID: 861191503566786746, guid: 5499c25600a07354fbedd3a230b09075, type: 3}
       propertyPath: m_Colors.m_PressedColor.r
@@ -53,11 +53,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 861191503566786746, guid: 5499c25600a07354fbedd3a230b09075, type: 3}
       propertyPath: m_Colors.m_SelectedColor.b
-      value: 0.1254902
+      value: 0.5019608
       objectReference: {fileID: 0}
     - target: {fileID: 861191503566786746, guid: 5499c25600a07354fbedd3a230b09075, type: 3}
       propertyPath: m_Colors.m_SelectedColor.g
-      value: 0.36862746
+      value: 0.2509804
       objectReference: {fileID: 0}
     - target: {fileID: 861191503566786746, guid: 5499c25600a07354fbedd3a230b09075, type: 3}
       propertyPath: m_Colors.m_SelectedColor.r
@@ -65,15 +65,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 861191503566786746, guid: 5499c25600a07354fbedd3a230b09075, type: 3}
       propertyPath: m_Colors.m_HighlightedColor.b
-      value: 0.2559185
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 861191503566786746, guid: 5499c25600a07354fbedd3a230b09075, type: 3}
       propertyPath: m_Colors.m_HighlightedColor.g
-      value: 0.764151
+      value: 0.5019608
       objectReference: {fileID: 0}
     - target: {fileID: 861191503566786746, guid: 5499c25600a07354fbedd3a230b09075, type: 3}
       propertyPath: m_Colors.m_HighlightedColor.r
-      value: 0.27118462
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 861191503566786747, guid: 5499c25600a07354fbedd3a230b09075, type: 3}
       propertyPath: m_Pivot.x
