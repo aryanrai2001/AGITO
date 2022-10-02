@@ -3,7 +3,6 @@ using UnityEngine.UI;
 
 public class Level2Handler : LevelHandler
 {
-    [HideInInspector] public EntityManager[] entities;
     [HideInInspector] public Button continueButtonLevel;
 
     public override int LevelIndex { get; set; }

@@ -12,12 +12,5 @@ public class NIRCamController : MonoBehaviour
     public void FixedUpdate()
     {
         rectTransfrom.position = LevelHandler.instance.levelCamera.ScreenToWorldPoint(Input.mousePosition);
-        foreach (EntityManager entity in ((Level2Handler)LevelHandler.instance).entities)
-        {
-            if (GetComponent<Collider2D>().bounds.Intersects(entity.GetComponent<Collider2D>().bounds))
-            {
-                entity.Revealed();
-            }
-        }    
     }
 }
