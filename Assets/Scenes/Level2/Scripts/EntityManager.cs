@@ -16,4 +16,8 @@ public class EntityManager : MonoBehaviour
 {
     public EntityType entityType;
 
+    public void Revealed()
+    {
+        Debug.Log("Collided");
+    }
 }

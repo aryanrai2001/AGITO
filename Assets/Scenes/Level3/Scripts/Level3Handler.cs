@@ -3,7 +3,7 @@ using UnityEngine.UI;
 
 public class Level3Handler : LevelHandler
 {
-    [HideInInspector] public Button continueButtonLevel3;
+    [HideInInspector] public Button continueButtonLevel;
 
     public override int LevelIndex { get; set; }
 
@@ -16,13 +16,13 @@ public class Level3Handler : LevelHandler
     public override void InitLevel()
     {
         LevelIndex = 3;
-        continueButtonLevel3 = canvas.transform.GetChild(0).GetComponent<Button>();
+        continueButtonLevel = canvas.transform.GetChild(0).GetComponent<Button>();
 
-        continueButtonLevel3.onClick.AddListener(delegate { GameManager.instance.menuManager.TransitionOnButton(levelsUIManager.ContinueAfterGame); });
+        continueButtonLevel.onClick.AddListener(delegate { GameManager.instance.menuManager.TransitionOnButton(levelsUIManager.ContinueAfterGame); });
     }
 
     public override void FinishLevel()
     {
-        continueButtonLevel3.interactable = true;
+        continueButtonLevel.interactable = true;
     }
 }
