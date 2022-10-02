@@ -42,7 +42,6 @@ We also used a [James Webb blogs by NASA](https://blogs.nasa.gov/webb/), taken f
 From the start of our journey, it was exciting to learn so much about James Webb Space Telescope and NASA's space exploration contributions. In process of project development, we faced many challenges. Fortunately, the encouragement of teammates and enthusiasm to do our best inspired us to overcome these challenges gracefully. While we all worked on different aspects of the game, it was very satisfying that it all came together as we expected.
 
 ## References
-Our Project is available at [Github](https://github.com/aryanrai2001/AGITO)
 <br>**Game Development**
 [Unity Engine](https://unity.com)
 <br>**Resources**
