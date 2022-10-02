@@ -1,4 +1,4 @@
-# AGITO: A Glaze Into The Origins
+# AGITO: A Gaze Into The Origins
 
 ## High-Level Project Summary
 We have developed a game using the Unity Game Engine that gives players, a first-hand experience of the James Webb Space Telescope's capabilities and its development history in a narratively structured experience. Players need to solve various puzzles and go through minigames that direct them toward space telescope challenges, astonishing results and findings, and ideas behind the making of such a galactic masterpiece. Additionally, our project provides access to  NASA's space resources and blogs in an interactive manner that is broken into easily digestible chunks with a trivia section to make sure that the players retain what they have learned. This is important that we learn how and why mankind invests its efforts working on innovations like the James Webb Space Telescope as observations of humans in the vast universe might lead us to the origin of everything.
