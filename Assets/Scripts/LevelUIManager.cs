@@ -62,8 +62,10 @@ public class LevelUIManager : MonoBehaviour
     private GameObject introPanel;
     private GameObject infoPanel;
     private GameObject triviaPanel;
+    private GameObject rewardPanel;
     private Button continueIntroButton;
     private Button continueInfoButton;
+    private Button continueRewardButton;
     private TriviaManager triviaManager;
 
     private bool hasTrivia;
@@ -74,12 +76,15 @@ public class LevelUIManager : MonoBehaviour
         introPanel = level.transform.GetChild(0).gameObject;
         infoPanel = level.transform.GetChild(1).gameObject;
         triviaPanel = level.transform.GetChild(2).gameObject;
+        rewardPanel = level.transform.GetChild(3).gameObject;
         triviaManager = triviaPanel.GetComponent<TriviaManager>();
         continueIntroButton = introPanel.transform.GetChild(1).GetChild(1).GetComponent<Button>();
         continueInfoButton = infoPanel.transform.GetChild(1).GetChild(1).GetComponent<Button>();
+        continueRewardButton = rewardPanel.transform.GetChild(1).GetComponent<Button>();
 
         continueIntroButton.onClick.AddListener(delegate { GameManager.instance.menuManager.TransitionOnButton(ContinueAfterIntro); });
         continueInfoButton.onClick.AddListener(delegate { GameManager.instance.menuManager.TransitionOnButton(ContinueAfterInfo); });
+        continueRewardButton.onClick.AddListener(delegate { GameManager.instance.menuManager.TransitionOnButton(ContinueAfterReward); });
         hasTrivia = triviaManager.Init();
     }
 
@@ -125,7 +130,13 @@ public class LevelUIManager : MonoBehaviour
     public void ContinueAfterTrivia()
     {
         PlayerPrefs.SetInt("LevelReached", LevelHandler.instance.LevelIndex);
-        LevelHandler.instance.Close();
         triviaPanel.SetActive(false);
+        rewardPanel.SetActive(true);
+    }
+
+    public void ContinueAfterReward()
+    {
+        rewardPanel.SetActive(false);
+        LevelHandler.instance.Close();
     }
 }
