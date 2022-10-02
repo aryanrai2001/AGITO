@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public class LevelNHandler : LevelHandler
+public class Level2Handler : LevelHandler
 {
     [HideInInspector] public Button continueButtonLevel2;
 
@@ -15,8 +15,8 @@ public class LevelNHandler : LevelHandler
 
     public override void InitLevel()
     {
-        LevelIndex = 0;
-        continueButtonLevel2 = canvas.transform.GetChild(0).GetComponent<Button>();
+        LevelIndex = 2;
+        continueButtonLevel2 = canvas.transform.GetChild(1).GetComponent<Button>();
 
         continueButtonLevel2.onClick.AddListener(delegate { GameManager.instance.menuManager.TransitionOnButton(levelsUIManager.ContinueAfterGame); });
     }

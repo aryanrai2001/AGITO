@@ -32,7 +32,7 @@ public class LevelManager : MonoBehaviour
             return;
         }
 
-        //Reset(); // !!!!!!!!!!!!!!!!!!!!!!!!!!! Remove This !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+        Reset(); // !!!!!!!!!!!!!!!!!!!!!!!!!!! Remove This !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
         this.levelInfoText = levelInfoText;
 
