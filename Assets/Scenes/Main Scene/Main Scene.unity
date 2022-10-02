@@ -728,6 +728,82 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 18327964}
   m_CullTransparentMesh: 1
+--- !u!1 &43229547
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 43229548}
+  - component: {fileID: 43229550}
+  - component: {fileID: 43229549}
+  m_Layer: 5
+  m_Name: Uranus
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &43229548
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 43229547}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.74999994, y: 0.74999994, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1280757669}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: -317.49994}
+  m_SizeDelta: {x: -596, y: -1400}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &43229549
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 43229547}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 7f3be0c2880765043b1ae8af7040300e, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &43229550
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 43229547}
+  m_CullTransparentMesh: 1
 --- !u!1 &56813099
 GameObject:
   m_ObjectHideFlags: 0
@@ -1819,7 +1895,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1418556656}
   m_Direction: 2
   m_Value: 1
-  m_Size: 0.6666667
+  m_Size: 0.46153846
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -1861,6 +1937,82 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 185266426}
+  m_CullTransparentMesh: 1
+--- !u!1 &194639764
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 194639765}
+  - component: {fileID: 194639767}
+  - component: {fileID: 194639766}
+  m_Layer: 5
+  m_Name: Webb1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &194639765
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 194639764}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.25, y: 0.25, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 542652677}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -300, y: 105.00006}
+  m_SizeDelta: {x: 300, y: 140}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &194639766
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 194639764}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 4a8f8f9438e28bc48b8cb78ecada6628, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &194639767
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 194639764}
   m_CullTransparentMesh: 1
 --- !u!1 &216073191
 GameObject:
@@ -2613,8 +2765,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1744810984}
   m_HandleRect: {fileID: 1744810983}
   m_Direction: 2
-  m_Value: 0
-  m_Size: 1
+  m_Value: 1
+  m_Size: 0.42857143
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -2688,7 +2840,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1404233904}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -2721,7 +2873,7 @@ MonoBehaviour:
     various important molecules using their spectroscopic modes. They are particularly
     sensitive to molecular ices present in cold molecular clouds before stars are
     formed, and NIRCam and NIRSpec will, for the first time, comprehensively map
-    the spatial distribution of ices to help us understand their chemistry.\r\n\nMIRI
+    the spatial distribution of ices to help us understand their chemistry.\r\n\n\n\n\n\n\n\n\n\nMIRI
     will also observe warm molecular gas near many young stars where rocky, potentially
     habitable planets may be forming. These observations will be sensitive to most
     bulk molecules and will allow us to develop a chemical census at the earliest
@@ -3903,8 +4055,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2076870024}
   m_HandleRect: {fileID: 2076870023}
   m_Direction: 2
-  m_Value: 0.9999999
-  m_Size: 0.54545456
+  m_Value: 1
+  m_Size: 0.3726708
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -4321,16 +4473,16 @@ MonoBehaviour:
     done. In particular, more distant objects are more highly redshifted, and their
     light is pushed from the UV and visible into the near-infrared. Thus observations
     of these distant objects (like the first galaxies formed in the Universe, for
-    example) requires an infrared telescope.\r\n\r\n<b><u>Let us look at each reason
-    in more detail</u> :</b> We often hear that infrared light passes through obscuring
-    dust, revealing newborn stars and planets that are still embedded in their parental
-    clouds. In fact, mid-infrared light, as seen by MIRI, can pass through 20 times
-    thicker clouds than visible light. Because young stars are formed quickly (by
-    cosmic standards, anyway) \u2013 in as little as a few 100,000 years \u2013 their
-    natal clouds have not had time to disperse, hiding what is going on in this critical
-    stage from visible view. Webb\u2019s infrared sensitivity allows us to understand
-    what happens at these very first stages, as gas and dust are actively collapsing
-    to form new stars.\r"
+    example) requires an infrared telescope.\r\n\n\n\n\n\n\n\r\n<b><u>Let us look
+    at each reason in more detail</u> :</b> We often hear that infrared light passes
+    through obscuring dust, revealing newborn stars and planets that are still embedded
+    in their parental clouds. In fact, mid-infrared light, as seen by MIRI, can pass
+    through 20 times thicker clouds than visible light. Because young stars are formed
+    quickly (by cosmic standards, anyway) \u2013 in as little as a few 100,000 years
+    \u2013 their natal clouds have not had time to disperse, hiding what is going
+    on in this critical stage from visible view. Webb\u2019s infrared sensitivity
+    allows us to understand what happens at these very first stages, as gas and dust
+    are actively collapsing to form new stars.\r"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: bf9afb85b006de840adde64df519e800, type: 2}
   m_sharedMaterial: {fileID: -7718841121852073926, guid: bf9afb85b006de840adde64df519e800, type: 2}
@@ -4436,13 +4588,15 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 525147151}
+  - {fileID: 194639765}
+  - {fileID: 1933686012}
   m_Father: {fileID: 990499814}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 900}
+  m_SizeDelta: {x: 0, y: 1300}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!1 &558923605
 GameObject:
@@ -5106,12 +5260,13 @@ MonoBehaviour:
   m_text: "NIRSpec has a microshutter device with a quarter of a million tiny controllable
     shutters. Opening a shutter where there is an interesting object and closing
     the shutters where there is not allows scientists to get clean spectra of up
-    to 100 sources at once.\r\n\r\n\u201COne exciting and challenging program we
-    plan to do is observe ocean worlds. There\u2019s evidence from the Hubble Space
-    Telescope that Jupiter\u2019s moon Europa has sporadic plumes of water-rich material.
-    We plan to take high-resolution imagery of Europa to study its surface and search
-    for plume activity and active geologic processes. If we locate a plume, we will
-    use Webb\u2019s spectroscopy to analyze the plume\u2019s composition.\r\n"
+    to 100 sources at once.\r\n\n\n\n\n\n\n\r\n\u201COne exciting and challenging
+    program we plan to do is observe ocean worlds. There\u2019s evidence from the
+    Hubble Space Telescope that Jupiter\u2019s moon Europa has sporadic plumes of
+    water-rich material. We plan to take high-resolution imagery of Europa to study
+    its surface and search for plume activity and active geologic processes. If we
+    locate a plume, we will use Webb\u2019s spectroscopy to analyze the plume\u2019s
+    composition.\r"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: bf9afb85b006de840adde64df519e800, type: 2}
   m_sharedMaterial: {fileID: -7718841121852073926, guid: bf9afb85b006de840adde64df519e800, type: 2}
@@ -6422,15 +6577,15 @@ MonoBehaviour:
     and that has gone into overdrive now that we are launched, deployed, and focused!
     I\u2019ll note that nearly all of my team\u2019s solar system data will be freely
     available to the broad planetary science community immediately. I made that choice
-    to enable more science discoveries with Webb in future proposals. I am gratified
-    to have been able to work with the team for all this time, and I especially want
-    to give a shout out to the thousands of people who collectively have enabled
-    this amazing facility for the astrophysics and planetary communities. Thank you!
-    Ad astra!\u201D\r\n\r\n<b>-<u>Heidi Hammel, vice president for science, Association
-    of Universities for Research in Astronomy (AURA)</u></b>\r\n\r\n<b>-<u>Stefanie
-    Milam, Webb deputy project scientist for planetary science, NASA\u2019s Goddard
-    Space Flight Center</u></b>\r\n\r\n<b>-<u>Jonathan Gardner, Webb deputy senior
-    project scientist, NASA Goddard</u></b>\r\n"
+    to enable more science discoveries with Webb in future proposals.\n\n\n\n\n\n\n\n\n\nI
+    am gratified to have been able to work with the team for all this time, and I
+    especially want to give a shout out to the thousands of people who collectively
+    have enabled this amazing facility for the astrophysics and planetary communities.
+    Thank you! Ad astra!\u201D\r\n\r\n\n\n\n\n\n\n\n\n\n<b>-<u>Heidi Hammel, vice
+    president for science, Association of Universities for Research in Astronomy
+    (AURA)</u></b>\r\n\r\n<b>-<u>Stefanie Milam, Webb deputy project scientist for
+    planetary science, NASA\u2019s Goddard Space Flight Center</u></b>\r\n\r\n<b>-<u>Jonathan
+    Gardner, Webb deputy senior project scientist, NASA Goddard</u></b>\r\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: bf9afb85b006de840adde64df519e800, type: 2}
   m_sharedMaterial: {fileID: -7718841121852073926, guid: bf9afb85b006de840adde64df519e800, type: 2}
@@ -7158,6 +7313,82 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &985050705
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 985050706}
+  - component: {fileID: 985050708}
+  - component: {fileID: 985050707}
+  m_Layer: 5
+  m_Name: EuropaChemical
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &985050706
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 985050705}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.74999994, y: 0.74999994, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1039734533}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: -474.99997}
+  m_SizeDelta: {x: -596, y: -860}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &985050707
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 985050705}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 1147d7a472196d446b6c2e02e22e9ea3, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &985050708
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 985050705}
+  m_CullTransparentMesh: 1
 --- !u!1 &990499813
 GameObject:
   m_ObjectHideFlags: 0
@@ -7405,13 +7636,15 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 662954130}
+  - {fileID: 1975894470}
+  - {fileID: 985050706}
   m_Father: {fileID: 374723249}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 600}
+  m_SizeDelta: {x: 0, y: 1400}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!1001 &1040227875
 PrefabInstance:
@@ -9282,13 +9515,15 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 843822602}
+  - {fileID: 1653666889}
+  - {fileID: 43229548}
   m_Father: {fileID: 558923606}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 1045}
+  m_SizeDelta: {x: 0, y: 2200}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!1 &1286693786
 GameObject:
@@ -9712,7 +9947,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 2080398457}
   m_Direction: 2
   m_Value: 1
-  m_Size: 0.57416266
+  m_Size: 0.27272728
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -10546,6 +10781,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 2071634859}
   - {fileID: 345905569}
   m_Father: {fileID: 1797246997}
   m_RootOrder: 0
@@ -10553,7 +10789,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 1100}
+  m_SizeDelta: {x: 0, y: 1610}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!1 &1418556655
 GameObject:
@@ -10588,7 +10824,7 @@ RectTransform:
   m_Father: {fileID: 1575539791}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.3333333}
+  m_AnchorMin: {x: 0, y: 0.53846157}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
@@ -11516,6 +11752,82 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 9057656806045973116, guid: 2397f817865961841b23771bc4d79926, type: 3}
   m_PrefabInstance: {fileID: 1603097337}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1653666888
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1653666889}
+  - component: {fileID: 1653666891}
+  - component: {fileID: 1653666890}
+  m_Layer: 5
+  m_Name: End Result
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1653666889
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1653666888}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1280757669}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 477.5}
+  m_SizeDelta: {x: 300, y: -1176}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1653666890
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1653666888}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: e7dc8784b861e924ca86ff2aeb88a2d8, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1653666891
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1653666888}
+  m_CullTransparentMesh: 1
 --- !u!1 &1661202369
 GameObject:
   m_ObjectHideFlags: 0
@@ -12510,7 +12822,7 @@ RectTransform:
   m_Father: {fileID: 1185785183}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 0.57142854}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
@@ -13803,6 +14115,82 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1933686011
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1933686012}
+  - component: {fileID: 1933686014}
+  - component: {fileID: 1933686013}
+  m_Layer: 5
+  m_Name: Webb2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1933686012
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1933686011}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.25, y: 0.25, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 542652677}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 300, y: 105.00006}
+  m_SizeDelta: {x: 300, y: 140}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1933686013
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1933686011}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: fde92e09b05afb342953a5b782637cec, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1933686014
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1933686011}
+  m_CullTransparentMesh: 1
 --- !u!1001 &1941082088
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14180,6 +14568,82 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2397f817865961841b23771bc4d79926, type: 3}
+--- !u!1 &1975894469
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1975894470}
+  - component: {fileID: 1975894472}
+  - component: {fileID: 1975894471}
+  m_Layer: 5
+  m_Name: Mircroshutter
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1975894470
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1975894469}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1039734533}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 275}
+  m_SizeDelta: {x: -540, y: -630}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1975894471
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1975894469}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 5d6ec837d4de6d84b8dc02c9beb504d5, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1975894472
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1975894469}
+  m_CullTransparentMesh: 1
 --- !u!1001 &1987713776
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14424,6 +14888,82 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 9057656806045973116, guid: 2397f817865961841b23771bc4d79926, type: 3}
   m_PrefabInstance: {fileID: 2056060573}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2071634858
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2071634859}
+  - component: {fileID: 2071634861}
+  - component: {fileID: 2071634860}
+  m_Layer: 5
+  m_Name: Europa
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2071634859
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2071634858}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1404233904}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 110}
+  m_SizeDelta: {x: 300, y: -530}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2071634860
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2071634858}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: bb100c73a52c83f4493a3955acbcac2a, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &2071634861
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2071634858}
+  m_CullTransparentMesh: 1
 --- !u!1 &2076870022
 GameObject:
   m_ObjectHideFlags: 0
@@ -14457,7 +14997,7 @@ RectTransform:
   m_Father: {fileID: 1572978070}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.45454538}
+  m_AnchorMin: {x: 0, y: 0.62732923}
   m_AnchorMax: {x: 1, y: 0.99999994}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
@@ -14533,8 +15073,8 @@ RectTransform:
   m_Father: {fileID: 968526394}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.42583734}
-  m_AnchorMax: {x: 1, y: 0.99999994}
+  m_AnchorMin: {x: 0, y: 0.72727275}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
