@@ -15,7 +15,7 @@ We have developed a game using the Unity Game Engine that gives players, a first
 ### AGITO! What is it? How does it work?
 [Enlightenauts](https://2022.spaceappschallenge.org/challenges/2022-challenges/through-the-looking-glass/teams/enlightenauts/project) bring you a game that gives you an awe-inspiring and informative experience that takes you through James Webb Space Telescope's capabilities and development journey in a narratively full-filling sequence, directly inspired by NASA blogs and resources provided by other space agencies including ESA and CSA. It's really exciting to learn about how mankind's astonishing creation turns into reality, how space is a real challenge, and how science becomes an obstacle and its resolution in this journey.
 
-![MainMenu](/Images/1.png?raw=true "MainMenu")
+![MainMenu](/Images/2.png?raw=true "MainMenu")
 
 The Game begins with a brief introduction of space telescope history and how the Hubble Space Telescope is now a reality helping in space exploration. As you continue you will find yourself solving a puzzle where you will reconstruct Hubble which is symbolic of its rebirth after the installation of the Corrective Optics Space Telescope Axial Replacement (COSTAR) instrument to fix the aberration in its mirror, during its first servicing mission.
 
